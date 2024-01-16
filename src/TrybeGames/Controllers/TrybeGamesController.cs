@@ -175,14 +175,14 @@ public class TrybeGamesController
         string gameReleaseDate = Console.ReadLine();
         DateTime verifiedReleaseDate = DateTime.ParseExact(gameReleaseDate, "dd/MM/yyyy", CultureInfo.InvariantCulture);
 
-        Console.WriteLine("Insira a descrição do jogo:");
+        Console.WriteLine("Insira o tipo de jogo:");
         PrintGameTypes();
         var gameType = Convert.ToInt32(Console.ReadLine());
-        if (gameType < 1 || gameType > 7)
-        {
-            Console.WriteLine("Opção inválida! Tente novamente.");
-            return;
-        }
+        // if (gameType < 1 || gameType > 7)
+        // {
+        //     Console.WriteLine("Opção inválida! Tente novamente.");
+        //     return;
+        // }
         var newGame = new Game
         {
             Name = gameName,
